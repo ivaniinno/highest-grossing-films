@@ -11,39 +11,37 @@
         <h1>Film Database</h1>
     </header>
     <main>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+        <div id="filters">
+            <input type="text" id="search" placeholder="Search by title...">
+            <button onclick="sortFilms('revenue')">Sort by Revenue</button>
+            <button onclick="sortFilms('title')">Sort by Title</button>
+        </div>
+        
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <style>
-            th{ 
-                cursor: pointer;
-                color:#fff;
-            }
-        </style>
+        <div id="filters">
+            <input type="text" id="search" placeholder="Search by title...">
+        </div>
 
-
-        <table class="table table-striped">
-            <tr class="bg-info">
-                <th class="bg-info" data-colname="id" data-order="asc">ID &#9650</th>
-                <th data-colname="title" data-order="asc">Title &#9650</th>
-                <th data-colname="release_year" data-order="asc">Release Year &#9650</th>
-                <th data-colname="director" data-order="asc">Director &#9650</th>
-                <th data-colname="box_office_revenue" data-order="asc">Box Office Revenue &#9650</th>
-                <th data-colname="country" data-order="asc">Country &#9650</th>
-            </tr>
-
-            <tbody id="myTable">
-        
-            </tbody>
-
-        </table>
-
+        <div id="film-list">
+            <table class="table table-striped">
+                <tr class="bg-info">
+                    <th class="bg-info" data-colname="id" data-order="asc">ID &#9650</th>
+                    <th data-colname="title" data-order="asc">Title &#9650</th>
+                    <th data-colname="release_year" data-order="asc">Release Year &#9650</th>
+                    <th data-colname="director" data-order="asc">Director &#9650</th>
+                    <th data-colname="box_office_revenue" data-order="asc">Box Office Revenue &#9650</th>
+                    <th data-colname="country" data-order="asc">Country &#9650</th>
+                </tr>
+    
+                <tbody id="myTable">
+                    <!-- Films will be inserted here -->
+                </tbody>
+    
+            </table>
+        </div>
         
     </main>
-    <script src="script.js"></script>
 
-
-</body>
+    </body>
 </html>

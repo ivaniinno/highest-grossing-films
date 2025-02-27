@@ -79,3 +79,8 @@ th {
 th:hover {
     background-color: #004d40; /* Darker teal background */
 }
+
+th { 
+    cursor: pointer;
+    color:#fff;
+}
