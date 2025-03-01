@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Film Database</h1>
+    </header>
+    <main>
+        <div id="filters">
+            <div class="filter-row">
+                <input type="text" id="search-title" placeholder="Search by title..." onkeyup="filterFilms('title')">
+                <input type="text" id="search-release-year" placeholder="Search by release year..." onkeyup="filterFilms('release_year')">
+                <input type="text" id="search-director" placeholder="Search by director..." onkeyup="filterFilms('director')">            
+                <input type="text" id="search-revenue" placeholder="Search by revenue..." onkeyup="filterFilms('box_office_revenue')">
+                <input type="text" id="search-country" placeholder="Search by country..." onkeyup="filterFilms('country')">
+            </div>
+            <div class="filter-row">
+                <button onclick="sortFilms('title')">Sort by Title</button>
+                <button onclick="sortFilms('release_year')">Sort by Release Year</button>
+                <button onclick="sortFilms('director')">Sort by Director</button>
+                <button onclick="sortFilms('box_office_revenue')">Sort by Revenue</button>
+                <button onclick="sortFilms('country')">Sort by Country</button>
+            </div>
+        </div>
+        <div id="film-list">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="bg-info">
+                        <th class="bg-info" data-colname="id" data-order="asc" onclick="sortFilms('id')">ID &#9650</th>
+                        <th data-colname="title" data-order="asc" onclick="sortFilms('title')">Title &#9650</th>
+                        <th data-colname="release_year" data-order="asc" onclick="sortFilms('release_year')">Release Year &#9650</th>
+                        <th data-colname="director" data-order="asc" onclick="sortFilms('director')">Director &#9650</th>
+                        <th data-colname="box_office_revenue" data-order="asc" onclick="sortFilms('box_office_revenue')">Box Office Revenue &#9650</th>
+                        <th data-colname="country" data-order="asc" onclick="sortFilms('country')">Country &#9650</th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    <!-- Film data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="scrypt.js"></script>
+</body>
+</html>
