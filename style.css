@@ -5,15 +5,14 @@ body {
     background-color: #e0f7fa; /* Light cyan background */
     color: #333;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
 }
 
 header {
     background-color: #00796b; /* Teal background */
     color: #fff;
-    padding: 1em 0;
+    padding: 20px 0;
     text-align: center;
     width: 100%;
 }
@@ -22,15 +21,32 @@ main {
     padding: 2em;
     background-color: #ffffff; /* White background */
     border-radius: 10px;
-    max-width: 800px;
+    width: 90%;
+    max-width: 1200px;
     margin: 2em auto;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #filters {
-    margin-bottom: 1em;
+    margin-bottom: 20px;
     text-align: center;
+    justify-content: space-between;
+}
+
+.filter-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 0.5em;
+    width: 200px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    background-color: #e0f7fa; /* Light cyan background */
+    color: #333;
 }
 
 #search {
@@ -55,7 +71,9 @@ button:hover {
 }
 
 #film-list {
-    margin-top: 1em;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table */
 }
 
 table {
@@ -65,9 +83,10 @@ table {
 }
 
 th, td {
-    padding: 0.5em;
+    padding: 10px;
     border: 1px solid #ddd;
-    text-align: left;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
 th {
@@ -82,5 +101,6 @@ th:hover {
 
 th { 
     cursor: pointer;
+    background-color: #00796b; /* Teal background */
     color:#fff;
 }
