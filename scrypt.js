@@ -2,11 +2,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetchFilms(); // Fetch the films data
     // Add event listeners for the search inputs
-    document.getElementById('search-title').addEventListener('input', () => filterFilms('title'));
-    document.getElementById('search-release-year').addEventListener('input', () => filterFilms('release_year'));
-    document.getElementById('search-director').addEventListener('input', () => filterFilms('director'));
-    document.getElementById('search-revenue').addEventListener('input', () => filterFilms('box_office_revenue'));
-    document.getElementById('search-country').addEventListener('input', () => filterFilms('country'));
+    document.getElementById('search_title').addEventListener('input', () => filterFilms('title'));
+    document.getElementById('search_release_year').addEventListener('input', () => filterFilms('release_year'));
+    document.getElementById('search_director').addEventListener('input', () => filterFilms('director'));
+    document.getElementById('search_box_office_revenue').addEventListener('input', () => filterFilms('box_office_revenue'));
+    document.getElementById('search_country').addEventListener('input', () => filterFilms('country'));
 });
 
 let films = []; // Array to store the films data
@@ -50,15 +50,15 @@ function displayFilms(films) {
 
 // Sort the films based on the specified column
 function sortFilms(column) {
-    const th = document.querySelector(`th[data-colname="${column}"]`);
-    const order = th.getAttribute('data-order');
+    const th = document.querySelector(`th[data_colname="${column}"]`);
+    const order = th.getAttribute('data_order');
     films.sort((a, b) => {
         if (a[column] < b[column]) return order === 'asc' ? -1 : 1;
         if (a[column] > b[column]) return order === 'asc' ? 1 : -1;
         return 0;
     });
     // Toggle the sort order and update the column header
-    th.setAttribute('data-order', order === 'asc' ? 'desc' : 'asc');
+    th.setAttribute('data_order', order === 'asc' ? 'desc' : 'asc');
     th.innerHTML = th.innerHTML.replace(order === 'asc' ? '▼' : '▲', order === 'asc' ? '▲' : '▼');
     displayFilms(films); // Display the sorted films
 }
@@ -66,7 +66,8 @@ function sortFilms(column) {
 // Filter the films based on the search input for the specified column
 function filterFilms(column) {
     // Get the search term from the input field
-    const searchTerm = document.getElementById(`search-${column}`).value.toLowerCase();
+    console.log(column);
+    const searchTerm = document.getElementById(`search_${column}`).value.toLowerCase();
     // Filter the films based on the search term
     const filteredFilms = films.filter(film => film[column].toString().toLowerCase().includes(searchTerm));
     displayFilms(filteredFilms); // Display the filtered films
