@@ -50,15 +50,15 @@ function displayFilms(films) {
 
 // Sort the films based on the specified column
 function sortFilms(column) {
-    const th = document.querySelector(`th[data_colname="${column}"]`);
-    const order = th.getAttribute('data_order');
+    const th = document.querySelector(`th[data-colname="${column}"]`);
+    const order = th.getAttribute('data-order');
     films.sort((a, b) => {
         if (a[column] < b[column]) return order === 'asc' ? -1 : 1;
         if (a[column] > b[column]) return order === 'asc' ? 1 : -1;
         return 0;
     });
     // Toggle the sort order and update the column header
-    th.setAttribute('data_order', order === 'asc' ? 'desc' : 'asc');
+    th.setAttribute('data-order', order === 'asc' ? 'desc' : 'asc');
     th.innerHTML = th.innerHTML.replace(order === 'asc' ? '▼' : '▲', order === 'asc' ? '▲' : '▼');
     displayFilms(films); // Display the sorted films
 }
