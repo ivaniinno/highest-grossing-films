@@ -13,18 +13,26 @@
     <main>
         <div id="filters">
             <div class="filter-row">
-                <input type="text" id="search-title" placeholder="Search by title..." onkeyup="filterFilms('title')">
-                <input type="text" id="search-release-year" placeholder="Search by release year..." onkeyup="filterFilms('release_year')">
-                <input type="text" id="search-director" placeholder="Search by director..." onkeyup="filterFilms('director')">            
-                <input type="text" id="search-revenue" placeholder="Search by revenue..." onkeyup="filterFilms('box_office_revenue')">
-                <input type="text" id="search-country" placeholder="Search by country..." onkeyup="filterFilms('country')">
-            </div>
-            <div class="sort-row">
-                <button onclick="sortFilms('title')">Sort by Title</button>
-                <button onclick="sortFilms('release_year')">Sort by Release Year</button>
-                <button onclick="sortFilms('director')">Sort by Director</button>
-                <button onclick="sortFilms('box_office_revenue')">Sort by Revenue</button>
-                <button onclick="sortFilms('country')">Sort by Country</button>
+                <div class="filter-column">
+                    <input type="text" id="search_title" placeholder="Search by title..." onkeyup="filterFilms('title')">
+                    <button onclick="sortFilms('title')">Sort by Title</button>
+                </div>
+                <div class="filter-column">
+                    <input type="text" id="search_release_year" placeholder="Search by release year..." onkeyup="filterFilms('release_year')">
+                    <button onclick="sortFilms('release_year')">Sort by Release Year</button>
+                </div>
+                <div class="filter-column">
+                    <input type="text" id="search_director" placeholder="Search by director..." onkeyup="filterFilms('director')">
+                    <button onclick="sortFilms('director')">Sort by Director</button>
+                </div>
+                <div class="filter-column">
+                    <input type="text" id="search_box_office_revenue" placeholder="Search by revenue..." onkeyup="filterFilms('box_office_revenue')">
+                    <button onclick="sortFilms('box_office_revenue')">Sort by Revenue</button>
+                </div>
+                <div class="filter-column">
+                    <input type="text" id="search_country" placeholder="Search by country..." onkeyup="filterFilms('country')">
+                    <button onclick="sortFilms('country')">Sort by Country</button>
+                </div>
             </div>
         </div>
         <div id="film-list">
