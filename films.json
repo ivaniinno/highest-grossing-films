@@ -49,19 +49,19 @@
     },
     {
         "id": 7,
+        "title": "Ne Zha 2",
+        "release_year": 2025,
+        "director": "Jiaozi",
+        "box_office_revenue": "$1,963,942,560",
+        "country": "China"
+    },
+    {
+        "id": 8,
         "title": "Spider-Man: No Way Home",
         "release_year": 2021,
         "director": "Jon Watts",
         "box_office_revenue": "$1,922,598,800",
         "country": "United States"
-    },
-    {
-        "id": 8,
-        "title": "Ne Zha 2",
-        "release_year": 2025,
-        "director": "Jiaozi",
-        "box_office_revenue": "$1,918,534,560",
-        "country": "China"
     },
     {
         "id": 9,
@@ -355,8 +355,8 @@
         "id": 45,
         "title": "Moana 2",
         "release_year": 2024,
-        "director": "David Derrick Jr., Jason Hand, Dana Ledoux Miller, ",
-        "box_office_revenue": "$1,053,502,480",
+        "director": "David Derrick Jr., Jason Hand, Dana Ledoux Miller",
+        "box_office_revenue": "$1,053,578,188",
         "country": "United States"
     },
     {
